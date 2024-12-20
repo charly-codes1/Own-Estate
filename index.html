@@ -1,30 +1,139 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0wnEstate</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+    .background-carousel {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh; /* Full viewport height */
+z-index: -1; /* Place behind other content */
+}
+
+.owl-carousel .item {
+height: 100vh; /* Ensure the carousel items are full height */
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.owl-carousel .item img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Make sure the images cover the entire area */
+opacity: 0.7; /* Set opacity to 70% */
+}
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1; /* On top of the image */
+    }
+
+    .container-fluid {
+        position: relative;
+        z-index: 10;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    h1, p {
+        color: white; /* Changed to white for better contrast */
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 10px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #16405E;
+        background-color: #F3A261;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #357ABD; /* Darker shade on hover */
+        transform: scale(1.1);
+    }
+
+    .invest {
+        background-color: #1D3557;
+        color: #F0A472;
+    }
+
+    /* Flexbox for button alignment */
+    .button-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Wrap buttons on small screens */
+    }
+    span{
+        color: #F0A472;
+    }
+</style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <h1 class="logo"><span>Own</span>Estate</h1>
-        </div>
-    </nav>    
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Own<span>Estate</span></a>
+    </nav>
 
-    <section>
-        <div class="container-fluid">
-            <h1>Choose Your Path To Real Estate Success!</h1>
-            <p class="text-align">
-                Whether you're an aspiring <span>investor</span> or a <span>sponsor</span><br> 
-                with exciting projects, we've got the tools to help you achieve your goals.
-            </p>
-            <div class="sign_in">
-                <button class="sign_investor">Sign Up As An Investor</button>
-                <button class="sign_sponsor">Sign Up As A Sponsor</button>
-            </div>
+    <!-- Background Carousel -->
+    <div class="background-carousel owl-carousel">
+        <div class="item">
+            <img src="https://images.pexels.com/photos/5997994/pexels-photo-5997994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="overlay"></div> <!-- Overlay for darkening -->
         </div>
-    </section>
+        <div class="item">
+            <img src="https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="overlay"></div>
+        </div>
+        <div class="item">
+            <img src="https://images.pexels.com/photos/7546776/pexels-photo-7546776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="overlay"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h1>Choose Your Path To Real Estate Success!</h1>
+        <p>
+            Whether you're an aspiring <span>investor</span> or a <span>sponsor</span>, we've got the tools to help you achieve your goals.
+        </p>
+        <div class="button-group">
+            <a href="#" class="btn invest">Sign Up As An Investor</a>
+            <a href="#" class="btn">Sign Up As A Sponsor</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

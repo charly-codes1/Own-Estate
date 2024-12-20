@@ -1,60 +1,77 @@
-body{
-    font-family:Arial;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+.background-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Place behind other content */
+}
+.owl-carousel .item {
+    height: 100vh; /* Ensure the carousel items are full height */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
-
-span{
-    color:#F2A363;
+.owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the images cover the entire area */
+    opacity: 0.7; /* Set opacity to 70% */
 }
-
-.container-fluid{
-    margin-top: 10%;
-    margin-left: 30%;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* On top of the image */
 }
-
-/* General button styling */
-button {
-    padding: 20px 40px; 
-    font-size: 20px;   
-    border: none;
-    background-color: #1D3557; 
-    color:#EBA168;       
-    border-radius: 8px; 
-    cursor: pointer;    
-    margin-top: 30px;
-
-    /* spacing between buttons */
-    margin-right: 20px; 
-}
-
-button:last-child {
-    margin-right: 0; 
-    color:#263954;
-    background-color: #F3A261;
-}
-
-
-/* Hover effect */
-button:hover {
-    background-color: #0056b3; 
-}
-
-/* Specific spacing for buttons */
-.text-align {
+.container-fluid {
+    position: relative;
+    z-index: 10;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    line-height: 1.5; 
-    margin-right: 55%;
-    color:#273037;
 }
-
-h1{
-    color:#27323B;
+h1, p {
+    color: white; /* Changed to white for better contrast */
 }
-
-.navbar h1{
-margin-left: 10%;
-font-size: 24px;
-color: #2c3e50;
+.btn {
+    display: inline-block;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #16405E;
+    background-color: #F3A261;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
 }
-
-
+.btn:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+    transform: scale(1.1);
+}
+.invest {
+    background-color: #1D3557;
+    color: #F0A472;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap buttons on small screens */
+}
+span {
+    color: #F0A472;
+}
