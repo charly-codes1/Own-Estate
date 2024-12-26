@@ -45,6 +45,11 @@ header {
   margin-right: 10px;
 }
 
+.back-link i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
 .investors-details {
   display: flex;
   gap: 30px;
