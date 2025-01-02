@@ -173,6 +173,7 @@ video {
   border-radius: 5px;
   font-size: 1.2rem;
   margin-right: 2rem;
+  cursor: pointer;
 }
 .invest {
   background-color: var(--pure-white);
@@ -181,6 +182,7 @@ video {
   border: 3px solid var(--beige);
   border-radius: 5px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* Objectives */
