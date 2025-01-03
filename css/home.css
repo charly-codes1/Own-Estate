@@ -12,6 +12,18 @@
   --pure-white: rgb(255, 255, 255);
 }
 
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -188,7 +200,8 @@ video {
 /* Objectives */
 .objectives {
   background-color: var(--navyblue);
-  height: 42vh;
+  height: 55vh;
+  position: relative;
 }
 .objectives h1 {
   color: var(--pure-white);
@@ -212,6 +225,7 @@ video {
   color: var(--pure-white);
   font-size: 14px;
   font-weight: 500;
+  margin-top: 1rem;
 }
 /* Media queries */
 @media only screen and (max-width: 768px) {
