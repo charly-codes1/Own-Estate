@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
 }
 .own {
   color: #1d3557;
@@ -30,9 +31,10 @@ body {
   max-width: 1100px; /* Maximum width */
 }
 
-header {
-  display: block;
-  margin-bottom: 20px;
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .own,
 .estate {
@@ -43,11 +45,6 @@ header {
   text-decoration: none;
   color: #1d3557;
   margin-right: 10px;
-}
-
-.back-link i {
-  font-size: 18px;
-  margin-right: 5px;
 }
 
 .investors-details {
@@ -155,22 +152,38 @@ button:hover {
 }
 .password-toggle-icon {
   position: absolute;
-  top: 35%;
+  top: 28%;
   right: 30px;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-.password-toggle-icon i {
-  font-size: 18px;
-  line-height: 1;
-  color: var(--beige);
-  transition: color 0.3s ease-in-out;
-  margin-bottom: 20px;
+.password__toggle-icon {
+  position: absolute;
+  top: 77%;
+  right: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
-.password-toggle-icon i:hover {
+.password__toggle-icon i {
+  display: none;
+  position: absolute;
+  top: 77%;
+  right: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
   color: var(--navyblue);
+}
+
+.password-toggle-icon svg {
+  font-size: 18px;
+  line-height: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.eye-icon path:hover {
+  fill: #00ffff; /* Change this to your desired color */
 }
 
 /* Responsive adjustments */
