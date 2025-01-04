@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +10,11 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&display=swap"
     rel="stylesheet"/>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css/style.css">
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png"sizes="32x32"href="./favicon/favicon-32x32.png"/>
     <linkrel="icon"type="image/png"sizes="16x16"href="./favicon/favicon-16x16.png"/>
@@ -19,26 +24,27 @@
     <link rel="stylesheet" href="home css/style.css">
 </head>
 <body>
-<header class="header">
-    <nav class="navbar">
-    <a href="#" class="nav-logo">Own<span class="estate">Estate</span></a>
+    <!-- NAVBAR -->
+<header class="headerr">
+    <nav class="navbar-container">
+    <a href="./home.html" class="nav-logo">Own<span class="estate">Estate</span></a>
     <div class="nav-menu">
         <ul class="nav-list">
         <li class="nav-item">
             <a href="#" class="nav-link home">Home</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Invest</a>
+            <a href="./investors.html" class="nav-link">Invest</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Dashboard</a>
+            <a href="./Dashboard.html" class="nav-link">Dashboard</a>
         </li>
         <li class="nav-item">
             <a href="#" class="nav-link">Admin</a>
         </li>
         </ul>
         <div class="nav-buttons">
-        <a href="#"><button class="login">Login</button></a>
+        <a href="./welcome.html"><button class="login">Login</button></a>
         <a href="#"><button class="signup">Sign Up</button></a>
         </div>
     </div>
@@ -49,8 +55,10 @@
     </div>
     </nav>
 </header>
+<!-- MAIN SECTION -->
 <main class="main">
     <div class="container">
+        <!-- HERO SECTION -->
     <section class="hero-section">
         <div class="bg-video">
         <video
@@ -77,10 +85,12 @@
         </div>
     </section>
     </div>
+    <!-- OBJECTIVES -->
     <section class="objectives">
     <h1>Our Objectives</h1>
     <div class="objectives-list">
         <div class="objective">
+        <img src="./Images/Objectives/Group 1.png" alt="user-friendly" height="80px"/>
         <p class="objective-text">
             Offer a user-friendly platform <br>
             for micro-investing in real estate.
@@ -88,7 +98,7 @@
         <img src="./Images/people.png" alt="people" />
         </div>
         <div class="objective">
-        <img src="./Images/education.png" alt="education" />
+        <img src="./Images/Objectives/Group 2.png" alt="educate" height="80px" />
         <p class="objective-text">
             Educate users on real estate<br>
             investments with contribution and <br>
@@ -96,7 +106,7 @@
         </p>
         </div>
         <div class="objective">
-        <img src="./Images/user-friendly.png" alt="user-friendly" />
+        <img src="./Images/Objectives/Group 3.png" alt="user-friendly" height="80px" />
         <p class="objective-text">
             Ensure transparency with clear <br>
             project progress tracking
@@ -105,6 +115,9 @@
     </div>
     </section>
 </main>
+
+
+                    <!-- Card Section -->
     <header>
         <h1>Discover Real Estate Opportunities</h1>
         <p>Browse and invest in curated projects with clear insights and growth potential.</p>
@@ -287,5 +300,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script  src="home.js"></script>
-    <script src="Javascript/home.js"></script>
+    <script src="javascript/home.js"></script>
 </body>
+

@@ -1,5 +1,3 @@
-@import url(navigation.css);
-
 *,
 *::after,
 *::before {
@@ -12,6 +10,17 @@
   --navyblue: #1d3557;
   --beige: #f4a261;
   --pure-white: rgb(255, 255, 255);
+  --darker-blue: #111b20;
+  --grayopacity: rgba(217, 217, 217, 0.7);
+  --gray: #d9d9d9;
+  --medium-blue: #263238;
+  --green: #008000;
+  --rose: #ad6359;
+  --yellow: #cd8e02;
+  --dark-rose: #9a4a4d;
+  --light-blue: #88a9d7;
+  --dark-blue: #4d7ec3;
+  --last-blue: #305992;
 }
 
 html {
@@ -36,11 +45,10 @@ a {
   background-color: var(--pure-white);
 }
 
-.navbar {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
   margin-left: 3rem;
 }
 .hamburger {
@@ -120,104 +128,7 @@ a {
 .home {
   font-weight: 700;
 }
-/* Hero-Section */
-.container {
-  max-width: 1728px;
-  height: 91.5vh;
-  position: relative;
-}
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.6;
-  z-index: -1;
-  overflow: hidden;
-}
 
-#background-video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-video {
-  filter: brightness(50%);
-}
-.hero-section__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.hero-section__content h1 {
-  color: var(--navyblue);
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-
-.hero-section__content p {
-  color: var(--navyblue);
-  font-size: 3rem;
-  line-height: 1.5;
-}
-.hero-section__buttons {
-  margin-top: 3rem;
-}
-.explore {
-  background-color: var(--navyblue);
-  color: var(--pure-white);
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  margin-right: 2rem;
-  cursor: pointer;
-}
-.invest {
-  background-color: var(--pure-white);
-  color: var(--navyblue);
-  padding: 0.9rem 3.5rem;
-  border: 3px solid var(--beige);
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Objectives */
-.objectives {
-  background-color: var(--navyblue);
-  height: 55vh;
-  position: relative;
-}
-.objectives h1 {
-  color: var(--pure-white);
-  font-size: 3.5rem;
-  font-weight: 500;
-  padding: 4rem 0;
-  text-align: center;
-}
-.objectives-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.objective {
-  text-align: center;
-  width: 33.3%;
-}
-
-.objective-text {
-  color: var(--pure-white);
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 1rem;
-}
 /* Media queries */
 @media only screen and (max-width: 768px) {
   /* Nav Bar */
@@ -271,15 +182,5 @@ video {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-
-  /* Objectives */
-  .objectives {
-    height: 100vh;
-  }
-  .objectives-list {
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 5rem 0;
   }
 }
