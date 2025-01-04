@@ -1,5 +1,3 @@
-@import url(navigation.css);
-
 *,
 *::after,
 *::before {
@@ -25,6 +23,7 @@ body {
   position: relative;
 }
 
+
 li {
   list-style: none;
 }
@@ -36,11 +35,10 @@ a {
   background-color: var(--pure-white);
 }
 
-.navbar {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
   margin-left: 3rem;
 }
 .hamburger {
@@ -176,14 +174,16 @@ video {
   border-radius: 5px;
   font-size: 1.2rem;
   margin-right: 2rem;
+  cursor: pointer;
 }
 .invest {
   background-color: var(--pure-white);
   color: var(--navyblue);
-  padding: 1rem 2rem;
+  padding: 0.9rem 3.5rem;
   border: 3px solid var(--beige);
   border-radius: 5px;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* Objectives */
