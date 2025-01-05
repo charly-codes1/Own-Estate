@@ -44,14 +44,23 @@ h1, p {
     text-align: center;
 }
 
-.navbar-brand span {
-    color: #F0A472; /* Default color for "Own" */
+/* Styling for "Own" */
+.navbar-brand .own {
+    color: #16405E; /* Apply the desired color */
+    font-weight: bold;
 }
+
+/* Styling for "Estate" */
 .navbar-brand .estate {
-    color: white; /* Match h1 color */
+    color: white; /* Keep "Estate" white */
     font-weight: 700;
     font-size: 20px;
 }
+
+.navbar-brand span {
+    color: #F0A472; /* Default color for "Own" */
+}
+
 
 p {
     font-size:25px;
