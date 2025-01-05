@@ -1,486 +1,486 @@
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    }
 
-.upper-section{
-    text-align: center;
+    .upper-section{
+        text-align: center;
+        padding: 2em 0;
+        margin-top: 4%;
+        font-size: 14px;
+    }
+
+    @keyframes float-in {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    } 
+
+    .floating {
+    animation: float-in 0.8s ease-out forwards;
+    }
+
+    .opportunities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 2em 0;
-    margin-top: 4%;
+    gap: 20px;
+    }
+
+    .opportunities > .card {
+    background: #fff;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    border-radius: 10px;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #f3a261;/* Orange border only for cards in opportunities */
+    }
+
+    .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .opportunities .card:nth-of-type(2) h2 {
+    margin-top: 40px;
+    }
+
+    .opportunities .card:nth-of-type(3) h2{
+        margin-top: 45px; 
+    }
+
+    .card-content {
+    max-width: 70%;
+    }
+
+    .profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    object-fit: cover;
+    }
+
+    .star-rating {
+    margin-bottom: 10px; /* Space below the star rating */
+    }
+    .card {
+    background: #fff;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    border-radius: 10px;
+    padding: 20px;
+    width: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: none;
+    }
+
+    .card img {
+    max-width: 100%;
+    border-radius: 5px;
+    }
+
+    .card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    }
+
+    .card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    }
+
+    .card ul li {
+    margin-bottom: 8px;
     font-size: 14px;
-}
+    color: #555;
+    }
 
-/* /* @keyframes float-in {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-} */
+    .card ul li i {
+    margin-right: 8px;
+    color: #1d3557;
+    }
 
-.floating {
-  animation: float-in 0.8s ease-out forwards;
-}
+    .progress-bar-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    }
 
-.opportunities {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2em 0;
-  gap: 20px;
-}
-
-.opportunities > .card {
-  background: #fff;
-  margin-top: 5%;
-  margin-bottom: 6%;
-  border-radius: 10px;
-  padding: 20px;
-  width: 20%;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border: 2px solid #f3a261;/* Orange border only for cards in opportunities */
-}
-
-.cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.opportunities .card:nth-of-type(2) h2 {
-  margin-top: 40px;
-}
-
-.opportunities .card:nth-of-type(3) h2{
-    margin-top: 45px; 
-}
-
-.card-content {
-  max-width: 70%;
-}
-
-.profile-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  object-fit: cover;
-}
-
-.star-rating {
-  margin-bottom: 10px; /* Space below the star rating */
-}
-.card {
-  background: #fff;
-  margin-top: 5%;
-  margin-bottom: 6%;
-  border-radius: 10px;
-  padding: 20px;
-  width: auto;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  border: none;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-.card h2 {
-  margin: 10px 0;
-  font-size: 18px;
-  color: #333;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.card ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #555;
-}
-
-.card ul li i {
-  margin-right: 8px;
-  color: #1d3557;
-}
-
-.progress-bar-container {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.progress-bar {
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  height: 3px;
-  width: 100%;
-  position: relative;
-}
-
-.progress {
-  background-color: #1d3557;
-  height: 100%;
-  border-radius: 5px 0 0 5px;
-  transition: width 0.3s ease;
-}
-
-.progress-percentage {
-  margin-left: 10px; /* Space between the bar and percentage */
-  font-weight: bold;
-  color: #000;
-}
-
-.card-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.btn-primary {
-  background: #f3a261;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-secondary {
-  background: #d1d6da;
-  color: #333;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: #0056b3;
-}
-
-.btn-secondary:hover {
-  background: #e0e0e0;
-}
-
-@media (max-width: 768px) {
-  .opportunities > .card {
+    .progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 3px;
     width: 100%;
-  }
-}
+    position: relative;
+    }
 
-.swiper-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
+    .progress {
+    background-color: #1d3557;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.3s ease;
+    }
 
-.swiper {
-  width: 90%;
-  max-width: 600px;
-  margin-bottom: 7%;
-}
+    .progress-percentage {
+    margin-left: 10px; /* Space between the bar and percentage */
+    font-weight: bold;
+    color: #000;
+    }
 
-.test-section {
-  text-align: center;
-}
-.test-section h1 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #1d3557;
-}
+    .card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    }
 
-.test-section h4 {
-  margin-top: 0;
-}
+    .btn-primary {
+    background: #f3a261;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .btn-secondary {
+    background: #d1d6da;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
 
-.container-about {
-  background-color: #1d3557;
-  color: white;
-  text-align: center;
-  padding: 2.2em;
-  width: 100%;
-  margin-bottom: 5%;
-  font-size: 20px;
-}
-.footer-right a {
-  color: #ffffff;
-  margin-bottom: 50px;
-}
+    .btn-primary:hover {
+    background: #0056b3;
+    }
 
-.footer {
-  background-color: #1d3557;
-  color: #ffffff;
-  padding: 20px;
-  text-align: left;
-}
+    .btn-secondary:hover {
+    background: #e0e0e0;
+    }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-}
+    @media (max-width: 768px) {
+    .opportunities > .card {
+        width: 100%;
+    }
+    }
 
-.footer-left,
-.footer-middle,
-.footer-right {
-  flex: 1;
-  margin: 0 10px;
-}
+    .swiper-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    }
 
-.footer-left h2 {
-  margin-bottom: 10px;
-}
+    .swiper {
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 7%;
+    }
 
-.footer-middle h3,
-.footer-right h3 {
-  margin-bottom: 10px;
-}
+    .test-section {
+    text-align: center;
+    }
+    .test-section h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #1d3557;
+    }
 
-.footer-middle ul {
-  list-style-type: none;
-  padding: 0;
-}
+    .test-section h4 {
+    margin-top: 0;
+    }
 
-.footer-middle ul li {
-  margin: 5px 0;
-}
+    .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
-.footer-middle ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
+    .container-about {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 2.2em;
+    width: 100%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    }
+    .footer-right a {
+    color: #ffffff;
+    margin-bottom: 50px;
+    }
 
-.footer-bottom {
-  text-align: left;
-  margin-top: 20px;
-  font-size: 12px;
-}
+    .footer {
+    background-color: #1d3557;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    }
 
-hr {
-  margin-top: 5%;
-}
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    }
 
-/* Hide navigation arrows */
-.swiper-button-next,
-.swiper-button-prev {
-  display: none; /* Hide the arrow buttons */
-}
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+    flex: 1;
+    margin: 0 10px;
+    }
 
-span {
-  color: #f3a261;
-}
+    .footer-left h2 {
+    margin-bottom: 10px;
+    }
 
-.carousel {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-color: #e0f7fa; /* Light blue background */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .footer-middle h3,
+    .footer-right h3 {
+    margin-bottom: 10px;
+    }
 
-.carousel-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: none;
-  width: 100%;
-  padding: 20px;
-  position: relative;
-  background-color: #fff; /* White background for items */
-  border-radius: 10px;
-  margin: 10px; /* Space between boxes */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .footer-middle ul {
+    list-style-type: none;
+    padding: 0;
+    }
 
-.carousel-item img.profile {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover;
-}
+    .footer-middle ul li {
+    margin: 5px 0;
+    }
 
-.carousel-item .text {
-  flex: 1;
-}
+    .footer-middle ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    }
 
-.carousel-item h1 {
-  font-size: 1.5rem;
-  margin: 0 0 10px;
-}
+    .footer-bottom {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 12px;
+    }
 
-.carousel-item p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
-}
+    hr {
+    margin-top: 5%;
+    }
 
-.top-right-icons {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-}
+    /* Hide navigation arrows */
+    .swiper-button-next,
+    .swiper-button-prev {
+    display: none; /* Hide the arrow buttons */
+    }
 
-.top-right-icons svg {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  fill: #f3a261;
-}
+    span {
+    color: #f3a261;
+    }
 
-.stars {
-  display: flex;
-}
+    .carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #e0f7fa; /* Light blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.stars svg {
-  margin-right: 5px;
-}
+    .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: none;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    background-color: #fff; /* White background for items */
+    border-radius: 10px;
+    margin: 10px; /* Space between boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-.carousel-wrapper {
-  display: flex;
-  width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
+    .carousel-item img.profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    }
 
-.carousel-wrapper .carousel-item {
-  scroll-snap-align: start;
-}
+    .carousel-item .text {
+    flex: 1;
+    }
 
-.social-icons {
-  display: flex;
-  gap: 10px; /* Space between icons */
-}
+    .carousel-item h1 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    }
 
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px; /* Width of the icon container */
-  height: 40px; /* Height of the icon container */
-  border-radius: 50%;
-  background-color: #f0a472;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+    .carousel-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+    }
 
-.icon:hover {
-  background-color: #f0a472;
-}
-.cards {
-  background-color: #1d3557;
-  color: #fff;
-}
+    .top-right-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    }
 
-.star-rating {
-  color: #f3a261;
-}
+    .top-right-icons svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    fill: #f3a261;
+    }
 
-/* General Card Styling */
-.cards {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 90%;
-}
+    .stars {
+    display: flex;
+    }
 
-/* Profile Image Styling */
-.profile-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
+    .stars svg {
+    margin-right: 5px;
+    }
 
-/* Card Content Styling */
-.card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
-}
+    .carousel-wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    }
 
-/* Top Row (Stars + Thumbs Up) */
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .carousel-wrapper .carousel-item {
+    scroll-snap-align: start;
+    }
 
-/* Star Rating Styling */
-.star-rating {
-  color: #f39c12; /* Gold color for stars */
-  font-size: 18px;
-}
+    .social-icons {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    }
 
-/* Thumbs-Up Styling */
-.thumbs-up {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 16px;
-  color: #1d3557;
-  font-weight: bold;
-}
+    .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Width of the icon container */
+    height: 40px; /* Height of the icon container */
+    border-radius: 50%;
+    background-color: #f0a472;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    }
 
-.thumbs-up span {
-  color: #f39c12; /* Gold color for numbers */
-}
+    .icon:hover {
+    background-color: #f0a472;
+    }
+    .cards {
+    background-color: #1d3557;
+    color: #fff;
+    }
 
-/* Preserve Existing Text Colors */
-.card-content h2 {
-  margin: 0;
-  font-size: 18px;
-  color: inherit; /* Inherits color from parent */
-}
+    .star-rating {
+    color: #f3a261;
+    }
 
-.card-content p {
-  margin: 0;
-  font-size: 14px;
-  color: inherit; /* Inherits color from parent */
-}
+    /* General Card Styling */
+    .cards {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 90%;
+    }
 
-/* Swiper Adjustments */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; /* Ensures cards are fully visible */
-}
+    /* Profile Image Styling */
+    .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    }
+
+    /* Card Content Styling */
+    .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    }
+
+    /* Top Row (Stars + Thumbs Up) */
+    .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    /* Star Rating Styling */
+    .star-rating {
+    color: #f39c12; /* Gold color for stars */
+    font-size: 18px;
+    }
+
+    /* Thumbs-Up Styling */
+    .thumbs-up {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #1d3557;
+    font-weight: bold;
+    }
+
+    .thumbs-up span {
+    color: #f39c12; /* Gold color for numbers */
+    }
+
+    /* Preserve Existing Text Colors */
+    .card-content h2 {
+    margin: 0;
+    font-size: 18px;
+    color: inherit; /* Inherits color from parent */
+    }
+
+    .card-content p {
+    margin: 0;
+    font-size: 14px;
+    color: inherit; /* Inherits color from parent */
+    }
+
+    /* Swiper Adjustments */
+    .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Ensures cards are fully visible */
+    }
