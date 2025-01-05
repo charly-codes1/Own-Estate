@@ -1,18 +1,11 @@
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    }
+.upper-section {
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 4%;
+  font-size: 14px;
+}
 
-    .upper-section{
-        text-align: center;
-        padding: 2em 0;
-        margin-top: 4%;
-        font-size: 14px;
-    }
-
-    @keyframes float-in {
+/* @keyframes float-in {
     from {
         transform: translateY(50px);
         opacity: 0;
@@ -25,462 +18,409 @@
 
     .floating {
     animation: float-in 0.8s ease-out forwards;
-    }
+    } */
 
-    .opportunities {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2em 0;
-    gap: 20px;
-    }
+.opportunities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2em 0;
+  gap: 20px;
+}
 
-    .opportunities > .card {
-    background: #fff;
-    margin-top: 5%;
-    margin-bottom: 6%;
-    border-radius: 10px;
-    padding: 20px;
-    width: 20%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 2px solid #f3a261;/* Orange border only for cards in opportunities */
-    }
+.opportunities > .card {
+  background: #fff;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #f3a261; /* Orange border only for cards in opportunities */
+}
 
-    .cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    }
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-    .opportunities .card:nth-of-type(2) h2 {
-    margin-top: 40px;
-    }
+.opportunities .card:nth-of-type(2) h2 {
+  margin-top: 40px;
+}
 
-    .opportunities .card:nth-of-type(3) h2{
-        margin-top: 45px; 
-    }
+.opportunities .card:nth-of-type(3) h2 {
+  margin-top: 45px;
+}
 
-    .card-content {
-    max-width: 70%;
-    }
+.card-content {
+  max-width: 70%;
+}
 
-    .profile-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    object-fit: cover;
-    }
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  object-fit: cover;
+}
 
-    .star-rating {
-    margin-bottom: 10px; /* Space below the star rating */
-    }
-    .card {
-    background: #fff;
-    margin-top: 5%;
-    margin-bottom: 6%;
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: none;
-    }
+.star-rating {
+  margin-bottom: 10px; /* Space below the star rating */
+}
+.card {
+  background: #fff;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  border-radius: 10px;
+  padding: 20px;
+  width: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: none;
+}
 
-    .card img {
-    max-width: 100%;
-    border-radius: 5px;
-    }
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
 
-    .card h2 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333;
-    }
+.card h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
 
-    .card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    }
+.card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
 
-    .card ul li {
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #555;
-    }
+.card ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
 
-    .card ul li i {
-    margin-right: 8px;
-    color: #1d3557;
-    }
+.card ul li i {
+  margin-right: 8px;
+  color: #1d3557;
+}
 
-    .progress-bar-container {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    }
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
 
-    .progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    height: 3px;
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 3px;
+  width: 100%;
+  position: relative;
+}
+
+.progress {
+  background-color: #1d3557;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  transition: width 0.3s ease;
+}
+
+.progress-percentage {
+  margin-left: 10px; /* Space between the bar and percentage */
+  font-weight: bold;
+  color: #000;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #f3a261;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #d1d6da;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .opportunities > .card {
     width: 100%;
-    position: relative;
-    }
+  }
+}
 
-    .progress {
-    background-color: #1d3557;
-    height: 100%;
-    border-radius: 5px 0 0 5px;
-    transition: width 0.3s ease;
-    }
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
-    .progress-percentage {
-    margin-left: 10px; /* Space between the bar and percentage */
-    font-weight: bold;
-    color: #000;
-    }
+.swiper {
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 7%;
+}
 
-    .card-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    }
+.test-section {
+  text-align: center;
+}
+.test-section h1 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1d3557;
+}
 
-    .btn-primary {
-    background: #f3a261;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    }
+.test-section h4 {
+  margin-top: 0;
+}
 
-    .btn-secondary {
-    background: #d1d6da;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .btn-primary:hover {
-    background: #0056b3;
-    }
+.container-about {
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 2.2em;
+  width: 100%;
+  margin-bottom: 5%;
+  font-size: 20px;
+}
 
-    .btn-secondary:hover {
-    background: #e0e0e0;
-    }
+hr {
+  margin-top: 5%;
+}
 
-    @media (max-width: 768px) {
-    .opportunities > .card {
-        width: 100%;
-    }
-    }
+/* Hide navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none; /* Hide the arrow buttons */
+}
 
-    .swiper-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    }
+span {
+  color: #f3a261;
+}
 
-    .swiper {
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 7%;
-    }
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #e0f7fa; /* Light blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .test-section {
-    text-align: center;
-    }
-    .test-section h1 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #1d3557;
-    }
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: none;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  background-color: #fff; /* White background for items */
+  border-radius: 10px;
+  margin: 10px; /* Space between boxes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .test-section h4 {
-    margin-top: 0;
-    }
+.carousel-item img.profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
 
-    .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+.carousel-item .text {
+  flex: 1;
+}
 
-    .container-about {
-    background-color: #1d3557;
-    color: white;
-    text-align: center;
-    padding: 2.2em;
-    width: 100%;
-    margin-bottom: 5%;
-    font-size: 20px;
-    }
-    .footer-right a {
-    color: #ffffff;
-    margin-bottom: 50px;
-    }
+.carousel-item h1 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
 
-    .footer {
-    background-color: #1d3557;
-    color: #ffffff;
-    padding: 20px;
-    text-align: left;
-    }
+.carousel-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
 
-    .footer-content {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    }
+.top-right-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
 
-    .footer-left,
-    .footer-middle,
-    .footer-right {
-    flex: 1;
-    margin: 0 10px;
-    }
+.top-right-icons svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  fill: #f3a261;
+}
 
-    .footer-left h2 {
-    margin-bottom: 10px;
-    }
+.stars {
+  display: flex;
+}
 
-    .footer-middle h3,
-    .footer-right h3 {
-    margin-bottom: 10px;
-    }
+.stars svg {
+  margin-right: 5px;
+}
 
-    .footer-middle ul {
-    list-style-type: none;
-    padding: 0;
-    }
+.carousel-wrapper {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
 
-    .footer-middle ul li {
-    margin: 5px 0;
-    }
+.carousel-wrapper .carousel-item {
+  scroll-snap-align: start;
+}
 
-    .footer-middle ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    }
+.social-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+}
 
-    .footer-bottom {
-    text-align: left;
-    margin-top: 20px;
-    font-size: 12px;
-    }
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Width of the icon container */
+  height: 40px; /* Height of the icon container */
+  border-radius: 50%;
+  background-color: #f0a472;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
 
-    hr {
-    margin-top: 5%;
-    }
+.icon:hover {
+  background-color: #f0a472;
+}
+.cards {
+  background-color: #1d3557;
+  color: #fff;
+}
 
-    /* Hide navigation arrows */
-    .swiper-button-next,
-    .swiper-button-prev {
-    display: none; /* Hide the arrow buttons */
-    }
+.star-rating {
+  color: #f3a261;
+}
 
-    span {
-    color: #f3a261;
-    }
+/* General Card Styling */
+.cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%;
+}
 
-    .carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: #e0f7fa; /* Light blue background */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+/* Profile Image Styling */
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
-    .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: none;
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    background-color: #fff; /* White background for items */
-    border-radius: 10px;
-    margin: 10px; /* Space between boxes */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+/* Card Content Styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
 
-    .carousel-item img.profile {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-    }
+/* Top Row (Stars + Thumbs Up) */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .carousel-item .text {
-    flex: 1;
-    }
+/* Star Rating Styling */
+.star-rating {
+  color: #f39c12; /* Gold color for stars */
+  font-size: 18px;
+}
 
-    .carousel-item h1 {
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-    }
+/* Thumbs-Up Styling */
+.thumbs-up {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  color: #1d3557;
+  font-weight: bold;
+}
 
-    .carousel-item p {
-    margin: 0;
-    font-size: 1rem;
-    color: #555;
-    }
+.thumbs-up span {
+  color: #f39c12; /* Gold color for numbers */
+}
 
-    .top-right-icons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    }
+/* Preserve Existing Text Colors */
+.card-content h2 {
+  margin: 0;
+  font-size: 18px;
+  color: inherit; /* Inherits color from parent */
+}
 
-    .top-right-icons svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    fill: #f3a261;
-    }
+.card-content p {
+  margin: 0;
+  font-size: 14px;
+  color: inherit; /* Inherits color from parent */
+}
 
-    .stars {
-    display: flex;
-    }
-
-    .stars svg {
-    margin-right: 5px;
-    }
-
-    .carousel-wrapper {
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    }
-
-    .carousel-wrapper .carousel-item {
-    scroll-snap-align: start;
-    }
-
-    .social-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-    }
-
-    .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Width of the icon container */
-    height: 40px; /* Height of the icon container */
-    border-radius: 50%;
-    background-color: #f0a472;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    }
-
-    .icon:hover {
-    background-color: #f0a472;
-    }
-    .cards {
-    background-color: #1d3557;
-    color: #fff;
-    }
-
-    .star-rating {
-    color: #f3a261;
-    }
-
-    /* General Card Styling */
-    .cards {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 90%;
-    }
-
-    /* Profile Image Styling */
-    .profile-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    }
-
-    /* Card Content Styling */
-    .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-grow: 1;
-    }
-
-    /* Top Row (Stars + Thumbs Up) */
-    .top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    }
-
-    /* Star Rating Styling */
-    .star-rating {
-    color: #f39c12; /* Gold color for stars */
-    font-size: 18px;
-    }
-
-    /* Thumbs-Up Styling */
-    .thumbs-up {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 16px;
-    color: #1d3557;
-    font-weight: bold;
-    }
-
-    .thumbs-up span {
-    color: #f39c12; /* Gold color for numbers */
-    }
-
-    /* Preserve Existing Text Colors */
-    .card-content h2 {
-    margin: 0;
-    font-size: 18px;
-    color: inherit; /* Inherits color from parent */
-    }
-
-    .card-content p {
-    margin: 0;
-    font-size: 14px;
-    color: inherit; /* Inherits color from parent */
-    }
-
-    /* Swiper Adjustments */
-    .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto; /* Ensures cards are fully visible */
-    }
+/* Swiper Adjustments */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Ensures cards are fully visible */
+}
