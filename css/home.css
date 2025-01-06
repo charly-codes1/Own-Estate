@@ -32,6 +32,7 @@ a {
 }
 .header {
   background-color: var(--pure-white);
+  padding: 1rem 0;
 }
 
 .navbar {
@@ -370,6 +371,9 @@ footer {
   .objectives-list {
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 5rem 0;
+    gap: 4rem 0;
+  }
+  .objective img {
+    height: 70px;
   }
 }
