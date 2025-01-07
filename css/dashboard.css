@@ -189,6 +189,12 @@ h2 {
   margin-top: 10px;
 }
 
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
 .btn-primary {
   background: #1d3557;
   color: #fff;
@@ -201,10 +207,21 @@ h2 {
 .btn-secondary {
   background: #f1f1f1;
   color: #333;
-  border: 1px solid #ccc;
+  border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.completed {
+  background-color: var(--green);
+  padding: 10px 30px;
+  color: var(--pure-white);
+}
+.continue {
+  background-color: var(--beige);
+  padding: 10px 30px;
+  color: var(--pure-white);
 }
 
 .btn-primary:hover {
@@ -289,29 +306,141 @@ h2 {
 .analytics-section {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
 }
 
 .analytics-card {
+  max-width: 600px;
   flex: 1;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: var(--grayopacity);
   padding: 20px;
-  text-align: center;
+}
+
+.analytics-card:nth-child(1) {
+  border-radius: 10px 0 10px 10px;
+}
+
+.analytics-card:nth-child(2) {
+  border-radius: 0 10px 10px 10px;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analytics-header h3,
+.ana-header {
+  color: var(--medium-blue);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: var(--medium-gray);
+  color: var(--navyblue);
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown i {
+  color: var(--navyblue);
+}
+.caret {
+  float: right; /* Position the caret icon to the right */
+  margin-left: 5px; /* Add some spacing between text and icon */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px; /* Set maximum height for the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.show {
+  display: block;
+}
+
+#monthYearList {
+  list-style: none;
+  padding: 0;
+}
+
+#monthYearList li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#monthYearList li:hover {
+  background-color: #f0f0f0;
 }
 
 /* Styling for the pie chart */
-.pie-chart {
-  width: 150px;
+.chartCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chartBox {
+  width: 300px;
+  flex: 1;
+}
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+  font-size: 12px;
+}
+.legend-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #241a9e;
+  gap: 10px;
+}
+.legend-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5566fd;
+  gap: 10px;
+}
+.legend-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #265da8;
+}
+.chartered {
+  /* width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; */
   position: relative;
 }
 
-.pie-chart span {
+.canvas-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 63.2%;
   transform: translate(-50%, -50%);
   font-size: 20px;
 }
@@ -325,7 +454,7 @@ h2 {
 .bar {
   display: inline-block;
   width: 20px;
-  height: 0;
+  height: 210px;
 }
 /* Activity */
 .activity-logs {
