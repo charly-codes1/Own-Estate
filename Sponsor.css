@@ -1,0 +1,129 @@
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+    }
+    .left-side {
+      flex: 1;
+      display: flex;
+      padding: 10px;
+    }
+    .right-side {
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0%;
+      color: #00264d;
+      text-align: center;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+      margin-top: 0%;
+      color: #555;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      margin-bottom: 1px;
+      padding: 15px;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input:focus {
+      border-color: #007BFF;
+    }
+    .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    .password-container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+      justify-content: space-between;
+    }
+    
+    .password-field {
+      flex: 1;
+      max-width: 48%;
+    }
+    
+    .password-field label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
+    .input-wrapper input {
+      width: 100%;
+      padding: 10px 40px 10px 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      font-size: 10px;
+      color: #f39c12;
+    }
+    button {
+      background-color: #00264d;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .illustration,
+  .form-container {
+    max-width: 100%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+}
