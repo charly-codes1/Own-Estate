@@ -1,976 +1,10 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/invest.css">
     <title>Real Estate Investing</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        .header {
-            position: absolute; /* Take the header out of the normal flow */
-            width: 100%;
-            z-index: 10; /* Ensure it's above the image */
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .nav-list {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-.cont-text{
-    text-align:center;
-}
-        .nav-item {
-            margin: 0 15px;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .hero-section {
-            position: relative;
-            text-align: center;
-        }
-
-        .bg-video img {
-            width: 100%;
-            height: auto;
-        }
-
-        .hero-section__content {
-            position: absolute; /* Positioning it on top of the image */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust for centering */
-            z-index: 5; /* Ensure content is on top of the image */
-            color: white;
-            padding: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /*  text shadow for better readability */
-        }
-        .estate{
-            color:#f3a261;
-        }
-        .upper-section {
-        text-align: center;
-        padding: 2em 0;
-        margin-top: 4%;
-        font-size: 14px;
-        }
-
-        .lower-section{
-        text-align: center;
-        padding: 2em 0;
-        margin-top: 4%;
-        font-size: 14px;
-        }
-        .opportunities {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 2em 0;
-        gap: 20px;
-        }
-
-        .opportunities > .card {
-        background: #fff;
-        margin-top: 5%;
-        margin-bottom: 6%;
-        border-radius: 10px;
-        padding: 20px;
-        width: 20%;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        border: 2px solid #f3a261; /* Orange border only for cards in opportunities */
-        }
-
-        .cards {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        position: relative;
-        padding: 20px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .opportunities .card:nth-of-type(2) h2 {
-        margin-top: 40px;
-        }
-
-        .opportunities .card:nth-of-type(3) h2 {
-        margin-top: 45px;
-        }
-        .opportunities .card:nth-of-type(1) h2 {
-        margin-top: 45px;
-        }
-        .card-content {
-        max-width: 70%;
-        }
-
-        .profile-image {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        object-fit: cover;
-        }
-
-        .star-rating {
-        margin-bottom: 10px; /* Space below the star rating */
-        }
-        .card {
-        background: #fff;
-        margin-top: 5%;
-        margin-bottom: 6%;
-        border-radius: 10px;
-        padding: 20px;
-        width: auto;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        border: none;
-        }
-
-        .card img {
-        max-width: 100%;
-        border-radius: 5px;
-        }
-
-        .card h2 {
-        margin: 10px 0;
-        font-size: 18px;
-        color: #333;
-        }
-
-        .card ul {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-        }
-
-        .card ul li {
-        margin-bottom: 8px;
-        font-size: 14px;
-        color: #555;
-        }
-
-        .card ul li i {
-        margin-right: 8px;
-        color: #1d3557;
-        }
-
-        .opportunities {
-    padding: 20px;
-}
-
-.opportunities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 30px; /* Increased space between cards */
-}
-
-.card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    margin: 10px; /* Add margin around each card for spacing */
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    color: #16405E;
-    margin: 15px 0;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.card ul li {
-    font-size: 0.9rem;
-    margin: 10px 0;
-}
-.progress-bar-container {
-    margin: 15px 0;
-    position: relative; /* Ensure child elements can be positioned relative to this */
-    text-align: left; /* Align contents to the left */
-}
-
-.progress-bar {
-    width: 90%; /* Adjust width as needed */
-    height: 10px;
-    background: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 0; /* Remove margin to align with container */
-}
-
-.progress {
-    height: 100%;
-    background: #1D3557;
-    border-radius: 5px;
-}
-
-.progress-percentage {
-    position: absolute; /* Position relative to the progress-bar-container */
-    left: calc(90% + 5px); /* Position it just to the right of the progress bar */
-    top: -2px; /* Adjust vertical alignment */
-    font-size: 0.9rem;
-    color: #333;
-    white-space: nowrap; /* Prevent text wrapping */
-}
-.card-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.btn-primary {
-    background-color: #F3A261;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #357ABD;
-}
-
-.btn-secondary {
-    background-color: #ddd;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #bbb;
-}
-.calculator-container {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
-            margin: 20px auto;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .property-selection,
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        select,
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .result {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 1.2rem;
-            color: #333;
-        }
-
-        /* Styles for calculator buttons */
-.calculator-container .button-group {
-    display: flex;
-    justify-content: space-between; /* Space buttons evenly */
-    margin-top: 10px; /* Add space above the button group */
-}
-    .calculator-container{
-        width: 100%;
-        background-color: #121B20;
-        color:white ;
-    }
-.calculator-btn {
-    width: 48%; /* Make buttons take approximately half the width */
-    padding: 10px;
-    background-color: #1D3557; /* Color specific to calculator buttons */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.calculator-btn:hover {
-    background-color: #457b9d;
-}
-
-/* Ensure buttons in cards have their own styling */
-.card-buttons {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-}
-
-.btn-primary, .btn-secondary {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-.nav-logo{
-    color:#193855;
-}
-.btn-primary {
-    background-color: #F3A261;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #357ABD;
-}
-
-.btn-secondary {
-    background-color: #ddd;
-    color: #333;
-}
-
-.btn-secondary:hover {
-    background-color: #bbb;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .opportunities-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .opportunities-grid {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
-    }
-    }
-    .upper-section {
-    text-align: center;
-    padding: 2em 0;
-    margin-top: 4%;
-    font-size: 14px;
-    }
-
-    .opportunities {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2em 0;
-    gap: 20px;
-    }
-
-    .opportunities > .card {
-    background: #fff;
-    margin-top: 5%;
-    margin-bottom: 6%;
-    border-radius: 10px;
-    padding: 20px;
-    width: 20%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 2px solid #f3a261; /* Orange border only for cards in opportunities */
-    }
-
-    .cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .opportunities .card:nth-of-type(2) h2 {
-    margin-top: 40px;
-    }
-
-    .opportunities .card:nth-of-type(3) h2 {
-    margin-top: 45px;
-    }
-
-    .card-content {
-    max-width: 70%;
-    }
-
-    .profile-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    object-fit: cover;
-    }
-
-    .star-rating {
-    margin-bottom: 10px; /* Space below the star rating */
-    }
-    .card {
-    background: #fff;
-    margin-top: 5%;
-    margin-bottom: 6%;
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: none;
-    }
-
-    .card img {
-    max-width: 100%;
-    border-radius: 5px;
-    }
-
-    .card h2 {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333;
-    }
-
-    .card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    }
-
-    .card ul li {
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #555;
-    }
-
-    .card ul li i {
-    margin-right: 8px;
-    color: #1d3557;
-    }
-
-    .progress-bar-container {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    }
-
-    .progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    height: 3px;
-    width: 100%;
-    position: relative;
-    }
-
-    .progress {
-    background-color: #1d3557;
-    height: 100%;
-    border-radius: 5px 0 0 5px;
-    transition: width 0.3s ease;
-    }
-
-    .progress-percentage {
-    margin-left: 10px; /* Space between the bar and percentage */
-    font-weight: bold;
-    color: #000;
-    }
-
-    .card-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    }
-
-    .btn-primary {
-    background: #f3a261;
-    color: #333;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-
-    .btn-secondary {
-    background: #d1d6da;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    }
-
-    .btn-primary:hover {
-    background: #0056b3;
-    }
-
-    .btn-secondary:hover {
-    background: #e0e0e0;
-    }
-
-    @media (max-width: 768px) {
-    .opportunities > .card {
-        width: 100%;
-    }
-    }   
-
-
-    .test-section {
-    text-align: center;
-    }
-    .test-section h1 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #1d3557;
-    }
-
-    .test-section h4 {
-    margin-top: 0;
-    }
-
-    .container-about {
-    background-color: #1d3557;
-    color: white;
-    text-align: center;
-    padding: 2.2em;
-    width: 100%;
-    margin-bottom: 5%;
-    font-size: 20px;
-    }
-
-    hr {
-    margin-top: 5%;
-    }
-
-    
-
-    span {
-    color: #f3a261;
-    }
-
-    .carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: #e0f7fa; /* Light blue background */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .carousel-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: none;
-    width: 100%;
-    padding: 20px;
-    position: relative;
-    background-color: #fff; /* White background for items */
-    border-radius: 10px;
-    margin: 10px; /* Space between boxes */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .carousel-item img.profile {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-    }
-
-    .carousel-item .text {
-    flex: 1;
-    }
-
-    .carousel-item h1 {
-    font-size: 1.5rem;
-    margin: 0 0 10px;
-    }
-
-    .carousel-item p {
-    margin: 0;
-    font-size: 1rem;
-    color: #555;
-    }
-
-    .top-right-icons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    }
-
-    .top-right-icons svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    fill: #f3a261;
-    }
-
-    .stars {
-    display: flex;
-    }
-
-    .stars svg {
-    margin-right: 5px;
-    }
-
-    .carousel-wrapper {
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    }
-
-    .carousel-wrapper .carousel-item {
-    scroll-snap-align: start;
-    }
-
-    .social-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-    }
-
-    .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Width of the icon container */
-    height: 40px; /* Height of the icon container */
-    border-radius: 50%;
-    background-color: #f0a472;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    }
-
-    .icon:hover {
-    background-color: #f0a472;
-    }
-    .cards {
-    background-color: #1d3557;
-    color: #fff;
-    }
-
-    .star-rating {
-    color: #f3a261;
-    }
-
-    /* General Card Styling */
-    .cards {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 90%;
-    }
-
-    /* Profile Image Styling */
-    .profile-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    }
-
-    /* Card Content Styling */
-    .card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-grow: 1;
-    }
-
-    /* Top Row (Stars + Thumbs Up) */
-    .top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    }
-
-    /* Star Rating Styling */
-    .star-rating {
-    color: #f39c12; /* Gold color for stars */
-    font-size: 18px;
-    }
-
-
-    /* Preserve Existing Text Colors */
-    .card-content h2 {
-    margin: 0;
-    font-size: 18px;
-    color: inherit; /* Inherits color from parent */
-    }
-
-    .card-content p {
-    margin: 0;
-    font-size: 14px;
-    color: inherit; /* Inherits color from parent */
-    }
-
-    footer {
-    background-color: #111b20;
-}
-
-.footer {
-    display: flex;
-    padding: 70px 100px;
-}
-
-.logo {
-    margin-bottom: 5px;
-}
-
-.footer-first {
-    flex: 1;
-    align-items: center;
-}
-
-.footer__first-text {
-    color: #ffffff; /* Use your desired color */
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.footer__first-socials {
-    display: flex;
-    gap: 10px; /* Space between icons */
-}
-
-.footer__first-socials img {
-    height: 40px; /* Adjust icon size */
-}
-
-.footer-second {
-    flex: 1;
-}
-
-.quick-links h3,
-.contact-us h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #f3a261; /* Adjust color as needed */
-}
-
-.quick-links ul,
-.contact-us ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.quick-links li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
-
-.list-links {
-    color: #ffffff; /* Adjust color as needed */
-}
-
-.row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
-
-.column {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.column p {
-    font-size: 15px;
-    font-weight: 500;
-    color: #ffffff; /* Adjust color as needed */
-}
-
-.column img {
-    height: 20px; /* Adjust icon size */
-}
-
-.copyright {
-    border-top: 2px solid #ffffff; /* Adjust color as needed */
-    padding: 20px 100px;
-    font-size: 15px;
-    color: #ffffff; /* Adjust color as needed */
-}a {
-    text-decoration: none; /* Remove underline from all links */
-}
-
-a:hover {
-    text-decoration: underline; /* Optional: Add underline on hover for better UX */
-}
-/* TRABA */
-.testimonials-container {
-    display: flex;
-    /* flex-wrap: wrap;  */
-    gap: 20px; /* Adds consistent spacing between items */
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.testi-text{
-    text-align: center;
-}
-.testimonial-card {
-    background-color: #282c34;
-    color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1 1 calc(30% - 20px); /* Ensures cards are 30% of the row minus margin */
-    max-width: calc(30% - 20px); /* Prevents cards from exceeding their space */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    overflow: hidden;
-}
-
-
-.testimonial-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #343a40;
-}
-
-.testimonial-card {
-    margin: 10px; /* Keep margin for spacing */
-    flex: 1 1 calc(33.33% - 20px); /* Adjust to 33.33% for three cards */
-    max-width: calc(33.33% - 20px); /* Ensure max width fits */
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-    .testimonial-card {
-        flex: 1 1 calc(45% - 20px); /* Two columns on smaller screens */
-        max-width: calc(45% - 20px);
-    }
-}
-
-@media (max-width: 400px) {
-    .testimonial-card {
-        flex: 1 1 100%; /* Full-width cards on small screens */
-        max-width: 100%;
-    }
-}
-
-
-/* ... rest of your CSS remains the same ... */
-
-        .testimonial-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            background-color: #343a40;
-        }
-
-        .rating {
-            color: gold;
-            margin-bottom: 10px;
-            animation: glow 1.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                opacity: 0.8;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .testimonial-text {
-            margin-bottom: 15px;
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            font-style: italic;
-            color: #a0aec0;
-        }
-
-        .author img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            .testimonial-card {
-                width: calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 400px) {
-            .testimonial-card {
-                width: 100%;
-            }
-        }
-
-    </style>
 </head>
 <body>
     <header class="header">
@@ -1017,7 +51,7 @@ a:hover {
         <h1>Discover Real Estate Opportunities</h1>
         <p>Browse and invest in curated projects with clear insights and growth potential.</p>
     </div>
-        <section class="opportunities">
+        <section class="opportunities" id="section-opportunities">
             <div class="opportunities-grid">
                 <!-- Repeat your card structure -->
                 <div class="card">
@@ -1037,7 +71,7 @@ a:hover {
                     </div>
                     <div class="card-buttons">
                         <button class="btn-primary">Invest Now</button>
-                        <button class="btn-secondary">Learn More</button>
+                        <a href="#popup"><button class="btn-secondary">Learn More</button></a>
                     </div>
                 </div>
                 <!-- Add all your other cards here -->
@@ -1058,7 +92,7 @@ a:hover {
                     </div>
                     <div class="card-buttons">
                         <button class="btn-primary">Invest Now</button>
-                        <button class="btn-secondary">Learn More</button>
+                        <a href="#popup2"><button class="btn-secondary">Learn More</button></a>
                     </div>
                 </div>
                 <div class="card">
@@ -1078,7 +112,7 @@ a:hover {
                     </div>
                     <div class="card-buttons">
                         <button class="btn-primary">Invest Now</button>
-                        <button class="btn-secondary">Learn More</button>
+                        <a href="#popup3"><button class="btn-secondary">Learn More</button></a>
                     </div>
                 </div>
                 <div class="card">
@@ -1142,7 +176,8 @@ a:hover {
                     </div>
                 </div>
             </section>
-            <section>  <div>            
+            <section id="section-calculator">  
+            <div>            
                 <p class="cont-text">
                     Explore Projects
                 </p>
@@ -1205,6 +240,171 @@ a:hover {
                 </div>
             </div>
         </section>
+        <!-- POPUP -->
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                <div class="row-6">
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536.png" alt="pink-house" class="popup__img">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536.png" alt="pink-house" class="popup__img2">
+                        <img src="images/invest/Frame 536.png" alt="pink-house" class="popup__img2">
+                    </div>
+                </div>
+            </div>
+                <div class="popup__right">
+                    <a href="#section-opportunities" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Invest in Serene Lakeview Apartments</h2>
+                    <p class="heading-tertiary u-margin-bottom-small">Victoria Island, Lagos</p>
+
+                    <div class="popup__text">
+                        <div class="key-details">
+                            <h3>Key Details Section:</h3>
+                            <ul>
+                                <li>Target Funding: $500,000.</li>
+                                <li>Funding Progress: 75% funded</li>
+                                <li>Minimum Investment: $500.</li>
+                                <li>Estimated Returns: 8% annual ROI.</li>
+                                <li>Duration: 12 months.</li>
+                                <li>Risk Level: Medium.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h3>Project Description:</h3>
+                            <p>Serene Lakeview Apartments is a modern luxury apartment complex located in the heart of Victoria Island. This project offers high potential for rental income and property appreciation due to its prime location near key business hubs.</p>
+                        </div>
+                        <div class="features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li>Swimming pool, gym, and rooftop lounge.</li>
+                                <li>Proximity to schools, shopping centers, and offices.</li>
+                            </ul>  
+                        </div>
+                        <div class="sponsors">
+                            <h3>Sponsors:</h3>
+                            <p>Developed by OwnEstate Properties, a trusted name with 2+ years of experience in high-end real estate developments.</p> 
+                        </div>
+                    </div>
+                    <a href="#section-calculator" class="sect-invest">Invest Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup2">
+            <div class="popup__content">
+                <div class="popup__left">
+                <div class="row-6">
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536 leaef.png" alt="pink-house" class="popup__img">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536 leaef.png" alt="pink-house" class="popup__img2">
+                        <img src="images/invest/Frame 536 leaef.png" alt="pink-house" class="popup__img2">
+                    </div>
+                </div>
+            </div>
+                <div class="popup__right">
+                    <a href="#section-opportunities" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Invest in Serene Lakeview Apartments</h2>
+                    <p class="heading-tertiary u-margin-bottom-small">Banana Island, Lagos</p>
+
+                    <div class="popup__text">
+                        <div class="key-details">
+                            <h3>Key Details Section:</h3>
+                            <ul>
+                                <li>Target Funding: $400,000.</li>
+                                <li>Funding Progress: 73% funded</li>
+                                <li>Minimum Investment: $500.</li>
+                                <li>Estimated Returns: 8% annual ROI.</li>
+                                <li>Duration: 12 months.</li>
+                                <li>Risk Level: Medium.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h3>Project Description:</h3>
+                            <p>Serene Lakeview Apartments is a modern luxury apartment complex located in the heart of Banana Island. This project offers high potential for rental income and property appreciation due to its prime location near key business hubs.</p>
+                        </div>
+                        <div class="features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li>Swimming pool, gym, and rooftop lounge.</li>
+                                <li>Proximity to schools, shopping centers, and offices.</li>
+                            </ul>  
+                        </div>
+                        <div class="sponsors">
+                            <h3>Sponsors:</h3>
+                            <p>Developed by OwnEstate Properties, a trusted name with 2+ years of experience in high-end real estate developments.</p> 
+                        </div>
+                    </div>
+                    <a href="#section-calculator" class="sect-invest">Invest Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup3">
+            <div class="popup__content">
+                <div class="popup__left">
+                <div class="row-6">
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536 black.png" alt="pink-house" class="popup__img">
+                    </div>
+                    <div class="col-6">
+                        <img src="images/invest/Frame 536 black.png" alt="pink-house" class="popup__img2">
+                        <img src="images/invest/Frame 536 black.png" alt="pink-house" class="popup__img2">
+                    </div>
+                </div>
+            </div>
+                <div class="popup__right">
+                    <a href="#section-opportunities" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Invest in Serene Lakeview Apartments</h2>
+                    <p class="heading-tertiary u-margin-bottom-small">Lekki, Lagos</p>
+
+                    <div class="popup__text">
+                        <div class="key-details">
+                            <h3>Key Details Section:</h3>
+                            <ul>
+                                <li>Target Funding: $300,000.</li>
+                                <li>Funding Progress: 75% funded</li>
+                                <li>Minimum Investment: $500.</li>
+                                <li>Estimated Returns: 8% annual ROI.</li>
+                                <li>Duration: 12 months.</li>
+                                <li>Risk Level: Medium.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h3>Project Description:</h3>
+                            <p>Serene Lakeview Apartments is a modern 
+                               luxury apartment complex located in the 
+                               heart of Lekki. This project offers 
+                               high potential for rental income and 
+                               property appreciation due to its prime
+                               location near key business hubs.
+                            </p>
+                        </div>
+                        <div class="features">
+                            <h3>Features:</h3>
+                            <ul>
+                                <li>Swimming pool, gym, and rooftop lounge.</li>
+                                <li>Proximity to schools, shopping centers, and offices.</li>
+                            </ul>  
+                        </div>
+                        <div class="sponsors">
+                            <h3>Sponsors:</h3>
+                            <p>Developed by OwnEstate Properties, a trusted name with 2+ years of experience in high-end real estate developments.</p> 
+                        </div>
+                    </div>
+                    <a href="#section-calculator" class="sect-invest">Invest Now</a>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+        <!-- Footer -->
         <footer>
             <section class="footer">
                 <div class="footer-first">

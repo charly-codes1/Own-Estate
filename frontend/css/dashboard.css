@@ -155,31 +155,32 @@ h2 {
   color: #1d3557;
 }
 
-.progress-bar {
-  position: relative;
-  background: #f1f1f1;
-  border-radius: 5px;
-  height: 10px;
+.progress-bar-container {
+  display: flex;
+  align-items: center;
   margin: 10px 0;
-  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 8px;
+  width: 100%;
+  position: relative;
 }
 
 .progress {
-  background: #1d3557;
+  background-color: #1d3557;
   height: 100%;
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
+  border-radius: 5px 0 0 5px;
+  transition: width 0.3s ease;
 }
 
 .progress-percentage {
-  position: absolute;
-  top: -20px; /* Adjust as needed */
-  right: 5px;
+  margin-left: 10px; /* Space between the bar and percentage */
   font-size: 12px;
-  color: #333;
-  z-index: 2;
-  font-weight: bold;
+  font-weight: 600;
+  color: #000;
 }
 
 .card-buttons {
@@ -247,6 +248,24 @@ h2 {
   margin-bottom: 10px;
 }
 
+.card-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.completed {
+  background-color: var(--green);
+  color: var(--pure-white);
+  border: none;
+}
+
+.continue {
+  background-color: var(--beige);
+  color: var(--pure-white);
+  border: none;
+}
+
 /* Styling for the explore opportunities section */
 .explore-opportunities {
   display: flex;
@@ -288,43 +307,135 @@ h2 {
 .analytics-section {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
+  padding: 50px;
 }
 
 .analytics-card {
   flex: 1;
-  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
-  text-align: center;
+  background-color: rgba(217, 217, 217, 0.7);
+}
+.analytics-card:nth-child(1) {
+  border-radius: 5px 0 5px 5px;
 }
 
-/* Styling for the pie chart */
-.pie-chart {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
-  position: relative;
+.analytics-card:nth-child(2) {
+  border-radius: 0 5px 5px 5px;
 }
 
-.pie-chart span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.analytics-header h3 {
   font-size: 20px;
 }
 
-/* Styling for the bar chart */
-.bar-chart {
-  width: 100%;
-  height: 200px;
+/* Calendar */
+#monthYearList {
+  list-style: none;
+  padding: 0;
 }
 
-.bar {
+#monthYearList li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#monthYearList li:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown {
+  position: relative;
   display: inline-block;
-  width: 20px;
-  height: 0;
+}
+
+.dropbtn {
+  background-color: rgba(125, 125, 125, 0.3);
+  color: var(--navyblue);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: relative; /* Add position: relative to the button */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.show {
+  display: block;
+}
+
+/* Styling for the doughnut chart */
+.chartCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chartBox {
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.side-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.side__chart-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.side__chart-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.side__chart-column:nth-child(1) {
+  font-size: 12px;
+  font-weight: 500;
+  color: #241a9e;
+}
+
+.side__chart-column:nth-child(2) {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5566fd;
+}
+
+.side__chart-column:nth-child(3) {
+  font-size: 12px;
+  font-weight: 500;
+  color: #265da8;
+}
+
+/* Styling for the bar chart */
+.chartCard-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chartBox-bar {
+  width: 500px;
 }
 /* Activity */
 .activity-logs {

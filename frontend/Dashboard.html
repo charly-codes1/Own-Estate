@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +14,7 @@
       rel="stylesheet"
     />
 
+    <!-- Frame-works -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -20,6 +23,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <!-- Style Sheet -->
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link
@@ -146,9 +152,11 @@
                 <li><i class="fas fa-tag"></i> Starting from $550.00</li>
                 <li><i class="fas fa-percentage"></i> 8% annual ROI</li>
               </ul>
-              <div class="progress-bar">
-                <div class="progress" style="width: 80%"></div>
-                <span class="">80%</span>
+              <div class="progress-bar-container">
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 80%;"></div>
+                  </div>
+                  <span class="progress-percentage">80%</span>
               </div>
             </div>
               
@@ -165,13 +173,14 @@
                 <li><i class="fas fa-tag"></i> Starting from $2,000</li>
                 <li><i class="fas fa-percentage"></i> 10% annual ROI</li>
               </ul>
-              <div class="progress-bar">
-                <div class="progress" style="width: 100%"></div>
-                <span class="progress-percentage">100%</span>
+              <div class="progress-bar-container">
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 100%;"></div>
+                  </div>
+                  <span class="progress-percentage">100%</span>
               </div>
-              <div class="card-buttons">
-                <button class="btn-primary">Invest Now</button>
-                <button class="btn-secondary">Learn More</button>
+              <div class="card-button">
+                <button class="btn-secondary completed">Completed</button>
               </div>
             </div>
             
@@ -187,13 +196,14 @@
                 <li><i class="fas fa-tag"></i> Starting from $5,000</li>
                 <li><i class="fas fa-percentage"></i> 15% annual ROI</li>
               </ul>
-              <div class="progress-bar">
-                <div class="progress" style="width: 0%"></div>
-                <span class="progress-percentage">0%</span>
+              <div class="progress-bar-container">
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 0%;"></div>
+                  </div>
+                  <span class="progress-percentage">0%</span>
               </div>
-              <div class="card-buttons">
-                <button class="btn-primary">Invest Now</button>
-                <button class="btn-secondary">Learn More</button>
+              <div class="card-button">
+                <button class="btn-secondary continue">Continue</button>
               </div>
             </div>
         </section>
@@ -218,7 +228,7 @@
               </ul>
               <div class="progress-bar">
                 <div class="progress" style="width: 80%"></div>
-                <span class="progress-percentage">80%</span>
+                <!-- <span class="progress-percentage">80%</span> -->
               </div>
 
               <div class="card-buttons">
@@ -241,7 +251,7 @@
               </ul>
               <div class="progress-bar">
                 <div class="progress" style="width: 75%"></div>
-                <span class="progress-percentage">75%</span>
+                <!-- <span class="progress-percentage">75%</span> -->
               </div>
               <div class="card-buttons">
                 <button class="btn-primary">Invest Now</button>
@@ -256,30 +266,56 @@
         </section>
 
         <!-- Analytics -->
-        <div class="section">
+        <section class="analytics">
           <h2>Analytics</h2>
           <div class="analytics-section">
             <div class="analytics-card">
-              <h3>Sales Analytics</h3>
-              <div class="pie-chart">
-                <span>60%</span>
+              <div class="analytics-header">
+                <h3>Sales Analytics</h3>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  Select Month/Year 
+                  <span class="caret"><i class="fa fa-caret-down"></i></span> 
+                </button>
+                <div class="dropdown-content">
+                  <ul id="monthYearList"></ul>
+                </div>
               </div>
-              <p>Total Projects Completed</p>
+              </div>
+              <div class="chartCard">
+                <div class="chartBox">
+                  <canvas id="myChart"></canvas>
+                </div>
+                <div class="side-chart">
+                  <div class="side__chart-row">
+                      <div class="side__chart-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#241A9E" d="M21.129 4.012a1.5 1.5 0 0 1-.141 2.117l-16 14a1.5 1.5 0 0 1-1.976-2.258l16-14a1.5 1.5 0 0 1 2.117.141m0 6.375a1.5 1.5 0 0 1-.141 2.117l-8.715 7.625a1.5 1.5 0 0 1-1.975-2.258l8.714-7.625a1.5 1.5 0 0 1 2.117.141m0 5.875a1.5 1.5 0 0 1-.03 2.01l-.111.107l-2 1.75a1.5 1.5 0 0 1-2.086-2.151l.11-.107l2-1.75a1.5 1.5 0 0 1 2.117.141m-7.286-12.25a1.5 1.5 0 0 1-.14 2.117l-8.715 7.625a1.5 1.5 0 0 1-1.976-2.258l8.715-7.625a1.5 1.5 0 0 1 2.116.141m-6.286 0a1.5 1.5 0 0 1-.03 2.01l-.11.107l-2.43 2.125a1.5 1.5 0 0 1-2.085-2.151l.11-.107l2.429-2.125a1.5 1.5 0 0 1 2.116.141"/></g></svg>
+                        <p>Total number of lands invested</p>
+                      </div>
+                      <div class="side__chart-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#5566FD" d="M22 9L12 1L2 9v2h2v10h5v-4a3 3 0 1 1 6 0v4h5V11h2z"/></svg>
+                        <p>Total number of houses invested</p>
+                      </div>
+                      <div class="side__chart-column">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="#265DA8" d="m13.351 3.064l8 3A1 1 0 0 1 21 8v11a2 2 0 0 1-2 2h-9v-5a1 1 0 1 0-2 0v5H5a2 2 0 0 1-2-2v-6a1 1 0 0 1-.263-1.965L13 8.236V5.068l-.351-.132a1 1 0 0 1 .702-1.872M17.5 14h-1a1 1 0 1 0 0 2h1a1 1 0 1 0 0-2m0-4h-1a1 1 0 0 0-.117 1.993L16.5 12h1a1 1 0 0 0 .117-1.993z"/></g></svg>
+                        <p>Total number of apartments invested</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="analytics-card">
-              <h3>Analytics</h3>
-              <div class="bar-chart">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+              <div class="analytics-header">
+                <h3>Analytics</h3>
               </div>
-              <p>Mon Tue Wed Thu Fri Sat</p>
+              <div class="chartCard-bar">
+                <div class="chartBox-bar">
+                  <canvas id="bar-chart"></canvas>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Activity Logs -->
         <section class="activity">
@@ -422,6 +458,6 @@
       <div class="copyright">© 2024 OwnEstate. All Rights Reserved.</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="javascript/dashboard.js"></script>
   </body>
 </html>
