@@ -68,77 +68,7 @@
             </div>
         </div>
     </main>
-<<<<<<< HEAD
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        document.getElementById("signup-form").addEventListener("submit", async function(e) {
-            e.preventDefault();
-
-            const firstName = document.getElementById("first-name").value.trim();
-            const lastName = document.getElementById("last-name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-            const confirmPassword = document.getElementById("confirm-password").value.trim();
-            const termsAccepted = document.getElementById("terms").checked;
-
-            if (password !== confirmPassword) {
-                alert("Passwords do not match!");
-                return;
-            }
-
-            if (!termsAccepted) {
-                alert("You must accept the Terms and Conditions to sign up.");
-                return;
-            }
-
-            const payload = {
-                username: `${firstName} ${lastName}`,
-                email,
-                password,
-                role: "user",
-            };
-            console.log(payload);
-
-            try {
-                const signupButton = document.querySelector("button[type='submit']");
-                signupButton.disabled = true;
-                signupButton.textContent = "Signing up...";
-
-                const response = await axios.post(
-                    "https://own-estate.onrender.com/api/auth/register",
-                    payload, {
-                        headers: {
-                            "Content-Type": "application/json"
-                        }
-                    }
-                );
-
-                alert("Signup successful! Welcome to OwnEstate.");
-                window.location.href = "/welcome.html";
-            } catch (error) {
-                if (error.response) {
-                    alert(`Signup failed: ${error.response.data.message}`);
-                } else if (error.request) {
-                    console.error("No response received:", error.request);
-                    alert("An error occurred. Please try again later.");
-                } else {
-                    console.error("Error:", error.message);
-                    alert("An unexpected error occurred.");
-                }
-            } finally {
-                // Re-enable the button
-                const signupButton = document.querySelector("button[type='submit']");
-                signupButton.disabled = false;
-                signupButton.textContent = "Sign Up";
-            }
-        });
-    </script>
-
+    <script src="scripts/investors.js"></script>
 </body>
 
 </html>
-=======
-    <script src="scripts/investors.js"></script>
-  </body>
-</html>
->>>>>>> 283d8e96b4d98241eeede0f3c44d80743cdef3fb
