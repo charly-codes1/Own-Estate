@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Sponsor || OwnEstate</title>
+    <link rel="stylesheet" href="./css/Sponsor.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <main class="main">
+      <nav class="navbar">
+        <div class="circle">
+          <a href="./home.html" class="back-arrow">&#8592;</a>
+        </div>
+        <a href="#" class="brand">Own<span class="highlight">Estate</span></a>
+      </nav>
+      <div class="form-container">
+        <div class="illustration">
+          <img src="./images/sponsor.jpg" alt="Illustration" />
+        </div>
+        <div class="form">
+          <h2>Become a Sponsor</h2>
+          <p>
+            Showcase your real estate projects to a community of aspiring
+            investors.
+          </p>
+          <form>
+            <label for="name">Full name/Organization name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name or organization name"
+              required
+            />
+            <br />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="password-container">
+              <div class="password-field">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password"
+                  required
+                />
+                <span class="toggle-password" data-target="password">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-4"
+                    style="width: 24; height: 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="password-field">
+                <label for="retype-password">Re-type Password</label>
+                <input
+                  type="password"
+                  id="retype-password"
+                  name="retype-password"
+                  placeholder="Re-type password"
+                  required
+                />
+                <span class="toggle-password" data-target="password">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-4"
+                    style="width: 24; height: 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <label for="category">Project Category</label>
+            <input
+              type="text"
+              id="category"
+              name="category"
+              placeholder="Enter project category"
+              required
+            />
+            <label for="phone">Phone Number</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Enter phone number"
+              required
+            />
+            <div class="terms">
+              <input
+                type="checkbox"
+                id="terms-checkbox"
+                name="terms"
+                required
+              />
+              By signing up, you agree to our
+              <a href="#">Terms and Conditions</a>.
+              <br />
+              Already have an account? <a href="#">Sign In</a> |
+              <a href="./Reset.html">Forgot password?</a>
+            </div>
+            <button id="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/Sponsor.js"></script>
+  </body>
+</html>

@@ -189,8 +189,8 @@
 }
 
 .container-about {
-    background-color: #1d3557;
-    color: white;
+    background-color: #D2D7DD;
+    color: #1D3557;
     text-align: center;
     padding: 2.2em;
     width: 100%;
@@ -302,9 +302,7 @@ span {
     align-items: center;
     justify-content: center;
     width: 40px;
-    /* Width of the icon container */
     height: 40px;
-    /* Height of the icon container */
     border-radius: 50%;
     background-color: #f0a472;
     color: white;
@@ -435,6 +433,7 @@ footer {
     font-size: 15px;
     font-weight: 500;
     margin-bottom: 10px;
+    line-height: 2;
 }
 
 .footer__first-socials {
@@ -522,7 +521,7 @@ footer {
 }
 
 .testimonial-card {
-    background-color: #282c34;
+    background-color: #1d3557;
     color: #fff;
     border-radius: 8px;
     padding: 20px;
@@ -535,6 +534,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     overflow: hidden;
     font-size: 20px;
+    font-weight: 400;
 }
 
 .testimonial-card:hover {
@@ -550,6 +550,29 @@ footer {
     /* Adjust to 33.33% for three cards */
     max-width: calc(33.33% - 20px);
     /* Ensure max width fits */
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.author-text h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.author-text p {
+    font-weight: 400;
+    color: #f4a261;
 }
 
 
@@ -578,7 +601,7 @@ footer {
 }
 
 .rating {
-    color: gold;
+    color: #f4a261;
     margin-bottom: 10px;
     animation: glow 1.5s ease-in-out infinite alternate;
 }
